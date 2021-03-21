@@ -19,6 +19,26 @@
   font-style: normal;
 }
 
+.bg-black {
+  background-color: #261c00;
+}
+
+.bg-white {
+  background-color: #fcfbf7;
+}
+
+.bg-grey-light {
+  background-color: #bfbfbf;
+}
+
+.bg-yellow {
+  background-color: #f4b000;
+}
+
+.bg-grey {
+  background-color: #918f8a;
+}
+
 ul,
 ol,
 ul ul,
@@ -157,19 +177,172 @@ p {
   font-weight: normal;
 }
 
+.text, .text-headline, .text-subhead, .text-body, .text-caption, .theme-light .text-headline, .theme-light .text-subhead, .theme-light .text-body, .theme-light .text-caption, body {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 16px;
+  color: #fcfbf7;
+}
+
+.text-headline, .text-subhead,
+.text-caption .text-body {
+  color: #fcfbf7;
+}
+
+.text-headline {
+  font-size: 1.875rem;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.text-subhead {
+  font-size: 1.25rem;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.text-body {
+  font-size: 1rem;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.text-caption {
+  font-size: 0.875rem;
+  line-height: 16px;
+  font-weight: normal;
+}
+
+.text--alternative {
+  color: #918f8a;
+}
+
+.theme-light .text, .theme-light .text-headline, .theme-light .text-subhead, .theme-light .text-body, .theme-light .text-caption, .theme-light body {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 16px;
+  color: #261c00;
+}
+
+.theme-light .text-headline, .theme-light .text-subhead,
+.theme-light .text-caption .theme-light .text-body {
+  color: #261c00;
+}
+
+.theme-light .text-headline {
+  font-size: 1.875rem;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.theme-light .text-subhead {
+  font-size: 1.25rem;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.theme-light .text-body {
+  font-size: 1rem;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.theme-light .text-caption {
+  font-size: 0.875rem;
+  line-height: 16px;
+  font-weight: normal;
+}
+
+.theme-light .text--alternative {
+  color: #918f8a;
+}
+
+/*
+* default theme - dark
+*/
+.theme-dark, .layout {
+  background: radial-gradient(70.24% 70.24% at 49.87% 29.76%, rgba(18, 12, 1, 0.9) 0%, #000000 100%) repeat-y;
+}
+
+.theme-light {
+  background: #fcfbf7;
+}
+
+.container, .stories-layout, .wrap,
+.row,
+.w-100 {
+  width: 100%;
+}
+
+.d-flex, .grid-layout, .grid-layout .column, .layout__colors .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.d-inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.d-column, .grid-layout .column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.d-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.d-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.d-no-wrap {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-50,
+.w-half {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.ml--4 {
+  margin-left: 4px;
+}
+
 html {
   font-size: 1rem;
 }
 
 body {
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #fcfbf7;
   width: 100%;
-  height: 100vh;
-  margin: 60px auto;
+  height: 100%;
+  background-color: #e5e5e5;
 }
 
-body.theme-dark, body, body.layout {
+body.theme-dark, body.layout {
   color: #fcfbf7;
 }
 
@@ -177,17 +350,47 @@ body.theme-light {
   color: #261c00;
 }
 
-.layout {
-  width: 376px;
-  padding: 24px;
-  border-radius: 6px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.stories-layout {
+  margin: 3.75rem;
 }
 
-.layout--colors {
-  height: 89px;
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-layout + .grid-layout {
+  margin-top: 2rem;
+}
+
+.grid-layout .column {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.layout {
+  width: 376px;
+  border-radius: 6px;
+}
+
+.layout + .layout {
+  margin-top: 2rem;
+}
+
+.layout.colors {
+  height: 5.5625rem;
+  padding: 1.5rem;
+}
+
+.layout.fonts {
+  padding: 1.25rem 1.5rem 1.75rem 1.5rem;
+}
+
+.layout__colors {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -196,44 +399,19 @@ body.theme-light {
           justify-content: space-between;
 }
 
-/*
-* default theme - dark
-*/
-.theme-dark, body, .layout {
-  background: radial-gradient(70.24% 70.24% at 49.87% 29.76%, rgba(18, 12, 1, 0.9) 0%, #000000 100%) repeat-y;
-}
-
-.theme-light {
-  background: #fcfbf7;
-}
-
-.block-colors {
+.layout__colors .block {
   width: 41px;
   height: 41px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   border-radius: 4px;
+  border: 2px solid transparent;
 }
 
-.bg-black {
-  background-color: #261c00;
+.layout__colors .block.has-border {
+  border: 2px solid #fcfbf7;
 }
 
-.bg-white {
-  background-color: #fcfbf7;
-}
-
-.bg-grey-light {
-  background-color: #bfbfbf;
-}
-
-.bg-yellow {
-  background-color: #f4b000;
-}
-
-.bg-grey {
-  background-color: #918f8a;
+.layout__fonts p + p {
+  margin-top: 1rem;
 }
 
 /* 

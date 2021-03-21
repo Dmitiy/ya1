@@ -1,3 +1,7 @@
+// fonst-size
+$size: 16px;
+$font-size: 1rem;
+
 // paths
 $path-img: "../images";
 $path-fonts: "../fonts/";
@@ -8,4 +12,46 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI";
 $font-regular: "Roboto-Regular";
 $font-medium: "Roboto-Medium";
 $font-bold: "Roboto-Bold";
+
 $font: $font-family, $font-family-sans-serif, sans-serif;
+
+// colors-palette
+$color-261c00: #261c00;
+$color-f4b000: #f4b000;
+$color-918f8a: #918f8a;
+$color-bfbfbf: #bfbfbf;
+$color-fcfbf7: #fcfbf7;
+
+// layout-bg-color
+$color-e5e5e5: #e5e5e5;
+
+// main-layout-colors
+
+$black: $color-261c00;
+$white: $color-fcfbf7;
+$grey-light: $color-bfbfbf;
+$yellow: $color-f4b000;
+$grey: $color-918f8a;
+
+// background-colors
+$dark-theme-radial-gradient: radial-gradient(
+  70.24% 70.24% at 49.87% 29.76%,
+  rgba(18, 12, 1, 0.9) 0%,
+  #000000 100%
+);
+
+$bg-default: $color-e5e5e5;
+
+$bg-dark-theme: $dark-theme-radial-gradient;
+$bg-light-theme: $white;
+
+// background-layout
+$bg-dark: $bg-dark-theme;
+$bg-light: $bg-light-theme;
+$bg-layout: $bg-dark;
+
+// forms elements
+$placeholder-text-color: $grey-light;
+
+// helper variables
+$transparent: transparent;

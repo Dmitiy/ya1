@@ -10,12 +10,67 @@
   </head>
   <body>
     <div class="stories-layout">
-      <div class="layout layout--colors">
-        <span class="block-colors bg-black"></span
-        ><span class="block-colors bg-yellow"></span
-        ><span class="block-colors bg-grey"></span
-        ><span class="block-colors bg-grey-light"></span
-        ><span class="block-colors bg-white"></span>
+      <div class="wrap">
+        <ul class="grid-layout">
+          <li class="column">
+            <div class="layout colors">
+              <div class="row d-flex layout__colors">
+                <span class="block bg-black has-border"></span>
+                <span class="block bg-yellow"></span>
+                <span class="block bg-grey"></span>
+                <span class="block bg-grey-light"></span>
+                <span class="block bg-white"></span>
+              </div>
+            </div>
+          </li>
+          <li class="column"></li>
+          <li class="column"></li>
+        </ul>
+        <ul class="grid-layout">
+          <li class="column">
+            <div class="layout fonts">
+              <div class="row layout__fonts">
+                <p class="text-headline">Headline</p>
+                <p class="text-subhead">
+                  Subhead
+                  <span class="text-subhead text--alternative ml--4"
+                    >Subhead</span
+                  >
+                </p>
+                <p class="text-body">
+                  Body
+                  <span class="text-caption text--alternative ml--4">Body</span>
+                </p>
+                <p class="text-caption text--alternative">
+                  Caption
+                  <span class="text-caption ml--4">Caption</span>
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="column">
+            <div class="layout fonts theme-light">
+              <div class="row layout__fonts">
+                <p class="text-headline">Headline</p>
+                <p class="text-subhead">
+                  Subhead
+                  <span class="text-subhead text--alternative ml--4"
+                    >Subhead</span
+                  >
+                </p>
+                <p class="text-body">
+                  Body
+                  <span class="text-caption text--alternative ml--4">Body</span>
+                </p>
+                <p class="text-caption text--alternative">
+                  Caption
+                  <span class="text-caption ml--4">Caption</span>
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="column"></li>
+        </ul>
       </div>
     </div>
   </body>

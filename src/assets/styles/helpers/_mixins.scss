@@ -1,1 +1,10 @@
 @import "_vars.scss";
+
+@mixin font($size: 16, $line: 16) {
+  font-size: ($size / 16) + rem;
+  line-height: $line + px;
+}
+
+@mixin border($width: 1, $line: solid, $color: transparent) {
+  border: ($width + px) $line $color;
+}

@@ -1,0 +1,11 @@
+@import "_vars.scss";
+
+/*
+* default theme - dark
+*/
+.theme-dark {
+  background: $bg-layout repeat-y;
+}
+.theme-light {
+  background: $white;
+}

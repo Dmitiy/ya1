@@ -1,0 +1,44 @@
+@import "./_vars";
+
+.container,
+.row,
+.w-100 {
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+.d-inline-flex {
+  display: inline-flex;
+}
+.d-column {
+  flex-direction: column;
+}
+.d-row {
+  flex-direction: row;
+}
+.d-wrap {
+  flex-wrap: wrap;
+}
+.d-no-wrap {
+  flex-wrap: nowrap;
+}
+
+// markup
+.w-75 {
+  width: 75%;
+}
+.w-50,
+.w-half {
+  width: 50%;
+}
+.w-25 {
+  width: 25%;
+}
+
+// helpers - indentation
+
+.ml--4 {
+  margin-left: 4px;
+}

@@ -1,16 +1,15 @@
 @import "./helpers/layout";
 
 html {
-  font-size: 1rem; //16px
+  font-size: $font-size; // 1rem = 16px
 }
 
 body {
-  font-family: $font;
+  @extend .text;
   color: $white;
   width: 100%;
-  height: 100vh;
-  @extend .theme-dark;
-  margin: 60px auto;
+  height: 100%;
+  background-color: $bg-default;
   &.theme-dark {
     color: $white;
   }
@@ -19,51 +18,64 @@ body {
   }
 }
 
-.layout {
-  width: 376px;
-  padding: 24px;
-  @extend .theme-dark;
-  border-radius: 6px;
-  display: flex;
-  &--colors {
-    height: 89px;
+.stories-layout {
+  @extend .container;
+  margin: 3.75rem;
+}
+.wrap {
+  @extend .container;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-layout {
+  @extend .d-flex;
+  + .grid-layout {
+    margin-top: 2rem;
+  }
+  .column {
+    @extend .d-flex;
+    @extend .d-column;
     align-items: center;
-    justify-content: space-between;
+    flex: 1;
   }
 }
 
-/*
-* default theme - dark
-*/
-.theme-dark {
-  background: $bg-layout repeat-y;
-}
-.theme-light {
-  background: $white;
-}
+.layout {
+  width: 376px;
+  @extend .theme-dark;
+  border-radius: 6px;
+  + .layout {
+    margin-top: 2rem;
+  }
+  &.colors {
+    height: 5.5625rem;
+    padding: 1.5rem;
+  }
+  &.fonts {
+    padding: 1.25rem 1.5rem 1.75rem 1.5rem;
+  }
 
-.block-colors {
-  width: 41px;
-  height: 41px;
-  display: flex;
-  border-radius: 4px;
-}
+  &__colors {
+    align-items: center;
+    justify-content: space-between;
 
-// bg-colors
-.bg-black {
-  background-color: $black;
-}
-.bg-white {
-  background-color: $white;
-}
-.bg-grey-light {
-  background-color: $grey-light;
-}
-.bg-yellow {
-  background-color: $yellow;
-}
-.bg-grey {
-  background-color: $grey;
+    .block {
+      width: 41px;
+      height: 41px;
+      @extend .d-flex;
+      border-radius: 4px;
+      @include border(2, solid, $transparent);
+      &.has-border {
+        @include border(2, solid, $white);
+      }
+    }
+  }
+  &__fonts {
+    p + p {
+      margin-top: 1rem;
+    }
+  }
 }
 
 // responsive layout
