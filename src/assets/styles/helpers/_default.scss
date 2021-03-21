@@ -1,0 +1,57 @@
+@import "./_colors";
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased !important;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder,
+::placeholder {
+  color: $placeholder-text-color;
+}
+
+html {
+  box-sizing: border-box;
+  text-size-adjust: 100%;
+}
+
+html,
+body {
+  width: 100%;
+  height: auto;
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+input {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: normal;
+}
