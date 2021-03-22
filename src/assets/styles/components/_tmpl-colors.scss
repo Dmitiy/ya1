@@ -1,0 +1,24 @@
+@import "../helpers/_vars";
+
+.layout {
+  &.colors {
+    height: 5.5625rem;
+    padding: 1.5rem;
+  }
+  &__colors {
+    @extend .d-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .block {
+      width: 41px;
+      height: 41px;
+      @extend .d-flex;
+      border-radius: 4px;
+      @include border(2, solid, $transparent);
+      &.has-border {
+        @include border(2, solid, $white);
+      }
+    }
+  }
+}

@@ -7,7 +7,7 @@ html {
 body {
   @extend .text;
   color: $white;
-  width: 100%;
+  @extend .container;
   height: 100%;
   background-color: $bg-default;
   &.theme-dark {
@@ -48,35 +48,12 @@ body {
   + .layout {
     margin-top: 2rem;
   }
-  &.colors {
-    height: 5.5625rem;
-    padding: 1.5rem;
-  }
-  &.fonts {
-    padding: 1.25rem 1.5rem 1.75rem 1.5rem;
-  }
-
-  &__colors {
-    align-items: center;
-    justify-content: space-between;
-
-    .block {
-      width: 41px;
-      height: 41px;
-      @extend .d-flex;
-      border-radius: 4px;
-      @include border(2, solid, $transparent);
-      &.has-border {
-        @include border(2, solid, $white);
-      }
-    }
-  }
-  &__fonts {
-    p + p {
-      margin-top: 1rem;
-    }
-  }
 }
+
+// templates
+@import "./components/_tmpl-colors";
+@import "./components/_tmpl-typography";
+@import "./components/_tmpl-bar-chart";
 
 // responsive layout
 @import "./helpers/_media";

@@ -1,0 +1,12 @@
+@import "../helpers/_vars";
+
+.layout {
+  &.fonts {
+    padding: 1.25rem 1.5rem 1.75rem 1.5rem;
+  }
+  &__fonts {
+    p + p {
+      margin-top: 1rem;
+    }
+  }
+}

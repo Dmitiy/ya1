@@ -66,5 +66,5 @@ xcuserdata/
 ###########
 node_modules/
 .vscode
-.css
-.css.map
+style.css
+style.css.map
