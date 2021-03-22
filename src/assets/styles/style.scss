@@ -20,7 +20,7 @@ body {
 
 .stories-layout {
   @extend .container;
-  margin: 3.75rem;
+  margin: 1.5rem auto;
 }
 .wrap {
   @extend .container;
@@ -44,6 +44,7 @@ body {
 .layout {
   width: 376px;
   @extend .theme-dark;
+  padding: 1.5rem;
   border-radius: 6px;
   + .layout {
     margin-top: 2rem;
@@ -54,6 +55,7 @@ body {
 @import "./components/_tmpl-colors";
 @import "./components/_tmpl-typography";
 @import "./components/_tmpl-bar-chart";
+@import "./components/_tmpl-people-data";
 
 // responsive layout
 @import "./helpers/_media";
