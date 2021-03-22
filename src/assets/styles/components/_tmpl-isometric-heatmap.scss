@@ -4,5 +4,12 @@
   &.isometric-heatmap {
   }
   &__isometric-heatmap {
+    @extend .d-flex;
+    justify-content: center;
+  }
+  .icon-sometric-heatmap {
+    + .icon-sometric-heatmap {
+      margin-left: 24px;
+    }
   }
 }
