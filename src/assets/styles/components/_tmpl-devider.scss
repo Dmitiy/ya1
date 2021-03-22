@@ -1,8 +1,30 @@
 @import "../helpers/_vars";
 
 .layout {
-  &.isometric-heatmap {
+  .devider {
+    opacity: 0.3;
+    background-color: $grey;
+    &--horizontal {
+      height: 2px;
+      @extend .row;
+    }
+    &--vertical {
+      width: 2px;
+      height: 100%;
+    }
   }
-  &__isometric-heatmap {
+  &.devider-line,
+  &__devider {
+    @extend .d-flex;
+  }
+
+  &__devider {
+    @extend .row;
+    align-items: center;
+  }
+}
+.theme-light {
+  .devider {
+    background-color: $grey-light;
   }
 }

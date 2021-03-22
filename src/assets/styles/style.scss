@@ -43,6 +43,7 @@ body {
 
 .layout {
   width: 376px;
+  min-height: 7.375rem;
   @extend .theme-dark;
   padding: 1.5rem;
   border-radius: 6px;

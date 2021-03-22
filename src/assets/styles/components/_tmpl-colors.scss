@@ -2,7 +2,7 @@
 
 .layout {
   &.colors {
-    height: 5.5625rem;
+    min-height: 5.5625rem;
   }
   &__colors {
     @extend .d-flex;
@@ -20,4 +20,22 @@
       }
     }
   }
+}
+
+// bg-colors
+
+.bg-black {
+  background-color: $black;
+}
+.bg-white {
+  background-color: $white;
+}
+.bg-grey-light {
+  background-color: $grey-light;
+}
+.bg-yellow {
+  background-color: $yellow;
+}
+.bg-grey {
+  background-color: $grey;
 }

@@ -1,4 +1,5 @@
 @import "../helpers/_vars";
+@import "../helpers/_mixins";
 
 .layout {
   &.fonts {
@@ -9,4 +10,87 @@
       margin-top: 1rem;
     }
   }
+}
+
+// fonts
+.text {
+  font-family: $font;
+  font-style: normal;
+  font-weight: normal;
+  @include font(16, 16);
+  color: $white;
+
+  &-headline,
+  &-subhead,
+  &-caption &-body {
+    color: $white;
+  }
+  &-headline {
+    @extend .text;
+    @include font(30, 32);
+    font-weight: 700;
+  }
+  &-subhead {
+    @extend .text;
+    @include font(20, 22);
+    font-weight: 700;
+  }
+  &-body {
+    @extend .text;
+    @include font(16, 18);
+    font-weight: 500;
+  }
+  &-caption {
+    @extend .text;
+    @include font(14, 16);
+    font-weight: normal;
+  }
+  &--alternative {
+    color: $grey;
+  }
+}
+
+.theme-light {
+  .text {
+    font-family: $font;
+    font-style: normal;
+    font-weight: normal;
+    @include font(16, 16);
+    color: $black;
+
+    &-headline,
+    &-subhead,
+    &-caption &-body {
+      color: $black;
+    }
+    &-headline {
+      @extend .text;
+      @include font(30, 32);
+      font-weight: 700;
+    }
+    &-subhead {
+      @extend .text;
+      @include font(20, 22);
+      font-weight: 700;
+    }
+    &-body {
+      @extend .text;
+      @include font(16, 18);
+      font-weight: 500;
+    }
+    &-caption {
+      @extend .text;
+      @include font(14, 16);
+      font-weight: normal;
+    }
+    &--alternative {
+      color: $grey;
+    }
+  }
+}
+
+.text--truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
