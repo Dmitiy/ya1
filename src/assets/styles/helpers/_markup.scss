@@ -25,6 +25,10 @@
   flex-wrap: nowrap;
 }
 
+.d-align-self-start {
+  align-self: flex-start;
+}
+
 // markup
 .w-75 {
   width: 75%;

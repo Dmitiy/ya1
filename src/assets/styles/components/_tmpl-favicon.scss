@@ -2,7 +2,16 @@
 
 .layout {
   &.favicon {
+    min-height: 6rem;
   }
   &__favicon {
+    @extend .d-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-fav {
+    + .icon-fav {
+      margin-left: 1rem;
+    }
   }
 }
