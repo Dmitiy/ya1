@@ -4,5 +4,58 @@
   &.buttons {
   }
   &__buttons {
+    @extend .d-flex;
+    justify-content: center;
+  }
+  .button,
+  button {
+    background-color: $transparent;
+    border: 0;
+    + .button {
+      margin-left: 1.5rem;
+    }
+    &:hover,
+    &.button-hover--dark {
+      cursor: pointer;
+      svg {
+        path {
+          fill: $grey;
+        }
+      }
+    }
+
+    &.button-hover--dark {
+      &:hover {
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.theme-light {
+  .button {
+    &:hover,
+    &.button-hover--light {
+      cursor: pointer;
+      svg {
+        path {
+          fill: $grey-light;
+        }
+      }
+    }
+
+    &.button-hover--light {
+      &:hover {
+        svg {
+          path {
+            fill: $yellow;
+          }
+        }
+      }
+    }
   }
 }
