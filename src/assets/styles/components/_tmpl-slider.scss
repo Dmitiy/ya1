@@ -2,7 +2,25 @@
 
 .layout {
   &.slider {
+    min-height: 14.0625rem;
+    @extend .d-flex;
   }
   &__slider {
+    @extend .d-flex;
+    align-items: center;
+  }
+  .slider-steps {
+    @extend .d-flex;
+    .step-item {
+      + .step-item {
+        margin-left: 0.5rem;
+      }
+      @extend .d-flex;
+      @extend .d-column;
+      flex: 1;
+    }
+    .step-period {
+      margin-top: 0.5rem;
+    }
   }
 }
